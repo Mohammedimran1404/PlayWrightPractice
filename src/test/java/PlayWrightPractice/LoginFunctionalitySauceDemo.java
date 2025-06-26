@@ -1,10 +1,8 @@
 package PlayWrightPractice;
 
 import com.microsoft.playwright.*;
-import com.microsoft.playwright.options.WaitForSelectorState;
 import org.testng.Assert;
 
-import java.util.List;
 
 public class LoginFunctionalitySauceDemo {
     public static void main(String[] args) {
@@ -35,8 +33,7 @@ public class LoginFunctionalitySauceDemo {
         PASSWORD_TEXT_FIELD.fill("secret_sauce");
         LOGIN_BUTTON.click();
         boolean flag = false;
-//        List<Locator> LST_ADDTOCART_BUTTON = page.locator("[class^='btn btn_primary btn_small btn_inventory']").all();
-//        List<Locator> LST_INVENTORY_NAMES = page.locator("[class^='inventory_item_name']").all();
+
           LST_INVENTORY_NAMES.nth(0).waitFor();
           int count=LST_INVENTORY_NAMES.count();
         System.out.println(count);

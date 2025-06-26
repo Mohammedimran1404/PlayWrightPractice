@@ -92,9 +92,9 @@ public class program {
         fieldFirstName.scrollIntoViewIfNeeded();
         page.mouse().move(575,88);
 
-
-//        playwright.close();
 //        buttonRefresh.click();
+        playwright.close();
+
 
 
     }
